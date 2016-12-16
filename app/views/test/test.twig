@@ -1,0 +1,11 @@
+{% extends 'test.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="page-wrapper">
+            {% block content %}
+                {% include 'test/content.twig' %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
