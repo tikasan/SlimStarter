@@ -24,6 +24,7 @@
     {% endfor %}
 </head>
 <body>
+    {% block header %}{% endblock %}
     {% block body %}{% endblock %}
 
     <!-- Include registered javascript -->
@@ -34,5 +35,7 @@
     {% for jsfile in js.internal %}
     <script src="{{assetUrl}}js/{{jsfile}}"></script>
     {% endfor %}
+
+    {% block footer %}{% endblock %}
 </body>
 </html>
