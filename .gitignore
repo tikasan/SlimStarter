@@ -1,2 +1,5 @@
 vendor
 dev
+
+.DS_Store
+.idea/
