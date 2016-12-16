@@ -228,10 +228,9 @@ class BaseController
      */
     protected function loadBaseCss()
     {
-        $this->loadCss("bootstrap.min.css");
-        $this->loadCss("font-awesome.min.css");
-        $this->loadCss("sb-admin.css");
-        $this->loadCss("custom.css");
+        $this->loadCss("base.css");
+        $this->loadCss("cmn_style.css");
+        $this->loadCss("smt_style.css");
     }
 
     /**
@@ -239,10 +238,6 @@ class BaseController
      */
     protected function loadBaseJs()
     {
-        $this->loadJs("jquery-1.10.2.js");
-        $this->loadJs("bootstrap.min.js");
-        $this->loadJs("plugins/metisMenu/jquery.metisMenu.js");
-        $this->loadJs("sb-admin.js");
     }
 
     /**
