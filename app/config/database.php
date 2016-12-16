@@ -1,16 +1,17 @@
 <?php
 
 $config['database'] = array(
-    'default'       => 'sqlite',
+    'default'       => 'mysql',
 
     'connections'   => array(
 
         'mysql' => array(
             'driver'    => 'mysql',
-            'host'      => isset($_SERVER['DB1_HOST']) ? $_SERVER['DB1_HOST'] : 'localhost',
-            'database'  => isset($_SERVER['DB1_NAME']) ? $_SERVER['DB1_NAME'] : 'database',
-            'username'  => isset($_SERVER['DB1_USER']) ? $_SERVER['DB1_USER'] : 'root',
-            'password'  => isset($_SERVER['DB1_PASS']) ? $_SERVER['DB1_PASS'] : '',
+            // http://qiita.com/dolaemoso/items/35f6bba22801b4027ec4
+            'host'      => isset($_SERVER['SLIM_HOST']) ? $_SERVER['SLIM_HOST'] : 'localhost',
+            'database'  => isset($_SERVER['SLIM_NAME']) ? $_SERVER['SLIM_NAME'] : 'database',
+            'username'  => isset($_SERVER['SLIM_USER']) ? $_SERVER['SLIM_USER'] : 'root',
+            'password'  => isset($_SERVER['SLIM_PASS']) ? $_SERVER['SLIM_PASS'] : '123',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
