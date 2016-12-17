@@ -230,7 +230,7 @@ class BaseController
     {
         $this->loadCss("base.css");
         $this->loadCss("cmn_style.css");
-        $this->loadCss("smt_style.css");
+        $this->loadCss("style_smt.css");
     }
 
     /**
