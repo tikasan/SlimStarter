@@ -9,7 +9,7 @@ $config['database'] = array(
             'driver'    => 'mysql',
             // http://qiita.com/dolaemoso/items/35f6bba22801b4027ec4
             'host'      => isset($_SERVER['SLIM_HOST']) ? $_SERVER['SLIM_HOST'] : 'localhost',
-            'database'  => isset($_SERVER['SLIM_NAME']) ? $_SERVER['SLIM_NAME'] : 'database',
+            'database'  => isset($_SERVER['SLIM_NAME']) ? $_SERVER['SLIM_NAME'] : 'candy',
             'username'  => isset($_SERVER['SLIM_USER']) ? $_SERVER['SLIM_USER'] : 'root',
             'password'  => isset($_SERVER['SLIM_PASS']) ? $_SERVER['SLIM_PASS'] : '123',
             'charset'   => 'utf8',
