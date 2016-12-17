@@ -1,7 +1,7 @@
 <?php
 
 session_cache_limiter(false);
-session_start();
+//session_start();
 
 define('ROOT_PATH'  , __DIR__.'/../../');
 define('VENDOR_PATH', __DIR__.'/../../vendor/');
