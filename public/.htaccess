@@ -13,3 +13,9 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+SetEnv SLIM_HOST=localhost
+SetEnv SLIM_NAME=candy
+SetEnv SLIM_USER=root
+SetEnv SLIM_PASS=123
+SetEnv SLIM_DNS=mysql:dbname=candy;host=localhost
