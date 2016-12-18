@@ -12,14 +12,16 @@ Class RecipeController extends BaseController
     // 検索画面
     public function index()
     {
-
+        $this->data['title'] = 'レシピ一覧';
+        View::display('recipe/index.twig', $this->data);
     }
 
     // getでrecipe/createにアクセスされた場合
     // 入力画面と確認画面はここでする。
     public function create()
     {
-
+        $this->data['title'] = 'レシピ新規作成';
+        View::display('recipe/input.twig', $this->data);
     }
 
     // postでrecipe/にアクセスされた場合
@@ -33,14 +35,16 @@ Class RecipeController extends BaseController
     // 詳細画面
     public function show($id)
     {
-
+        $this->data['title'] = '◯◯料理レシピ';
+        View::display('recipe/show.twig', $this->data);
     }
 
     // getでrecipe/:id/editにアクセスされた場合
     // 編集画面
     public function edit($id)
     {
-
+        $this->data['title'] = 'レシピ編集';
+        View::display('recipe/input.twig', $this->data);
     }
 
     // putまたはpatchでrecipe/:idにアクセスされた場合
