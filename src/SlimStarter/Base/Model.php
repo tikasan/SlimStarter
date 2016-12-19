@@ -2,6 +2,8 @@
 
 namespace SlimStarter\Base;
 
+use SlimStarter\Facade\ValidatorFacade as ValidationFactory;
+
 class Model extends \Illuminate\Database\Eloquent\Model {
 
     protected $errors;
@@ -13,7 +15,13 @@ class Model extends \Illuminate\Database\Eloquent\Model {
 
     protected static function messages()
     {
-        return [];
+        return [
+            'required' => '必須入力です',
+            'integer' => '数値のみで入力してください',
+            'email' => '入力されたメールアドレスの形式に間違いがあります',
+            'mimes' => '動画はMP4形式でアップロードしてください',
+            'string' => '不正な文字が入力されています',
+        ];
     }
 
     public static function findOne($attribute, $operator, $value){
@@ -82,7 +90,7 @@ class Model extends \Illuminate\Database\Eloquent\Model {
 
     public function validate()
     {
-        $v = \Validator::make($this->attributes, static::rules(), static::messages());
+        $v = ValidationFactory::make($this->attributes, static::rules(), static::messages());
         if (!$v->passes())
         {
             $this->setErrors($v->messages());

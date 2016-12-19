@@ -38,6 +38,13 @@ Class RecipeController extends Controller
     public function show($id)
     {
         $this->data['title'] = '◯◯料理レシピ';
+        $Recipe = new Recipe();
+        $Recipe->load(Input::get());
+        $Recipe->validate();
+
+        print Input::get('title');
+        print_r($Recipe->hasErrors()); // return boolean
+        print_r($Recipe->getErrors()); // return errors
         View::display('recipe/show.twig', $this->data);
     }
 
