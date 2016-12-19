@@ -23,7 +23,7 @@ return array(
             'schema_version_table' => 'schema_version',
 
             // directory contains migration task files.
-            'migration_dir' => './ddl'
+            'migration_dir' => './migration'
         ),
     ),
 );
