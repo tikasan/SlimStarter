@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Database\Eloquent\Model;
+use SlimStarter\Base\Model;
 
 class Recipe extends Model {
 
