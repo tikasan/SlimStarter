@@ -1,6 +1,8 @@
 <?php
 
-Class RecipeController extends BaseController
+use SlimStarter\Base\Controller;
+
+Class RecipeController extends Controller
 {
 
     public function __construct()
