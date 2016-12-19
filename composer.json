@@ -17,8 +17,11 @@
         "slim/views":"0.1.2",
         "twig/twig": "1.*",
         "twig/extensions": "*",
+        "volnix/csrf": "~1.0",
         "itsgoingd/slim-facades": "dev-master",
         "illuminate/database" : "4.*",
+        "illuminate/validation": "4.*",
+        "illuminate/translation": "4.*",
         "cartalyst/sentry" : "2.*",
         "kohkimakimoto/lib-migration": "1.*",
         "ircmaxell/password-compat": "1.0.*"
